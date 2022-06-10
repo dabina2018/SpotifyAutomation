@@ -20,7 +20,7 @@ class Playlist(object):
 class YoutubeClient(object):
     def __init__(self, credentials_location):
         scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
-        
+
         ## Disable OAuthlib's HTTPS verificaiton when running locally.
         ## *DO NOT* leave this otion enabled in production
         os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -41,7 +41,7 @@ class YoutubeClient(object):
         ##request = youtube.channels().list(    )
         ##response = request.execute()
 
-      
+
 
     def get_playlists(self):
         request = self.youtube_client.playlists()list(
@@ -51,10 +51,10 @@ class YoutubeClient(object):
         )
         response = request.execute()
         playlists = [Playlist(item['id'], item['snippet']['title']) for item in response ['items']]
-        
+
         return playlists
 
-        
+
     def get_videos_from_playlist(self, playlist_id):
         songs = []
 
@@ -83,5 +83,5 @@ class YoutubeClient(object):
 
         artist = video['artist]']
         track = video["track"]
-        
-        return artist, track 
+
+        return artist, track
