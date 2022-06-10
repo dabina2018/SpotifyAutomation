@@ -1,2 +1,2 @@
 # SpotifyAutomation
-using google api to automate spotify playlist
+Using Google API to automate Spotify playlist
