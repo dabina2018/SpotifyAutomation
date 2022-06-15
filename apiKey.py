@@ -9,12 +9,11 @@ config = {
   "messagingSenderId": "79755140115",
   "appId": "1:79755140115:web:483463b2c01f862d80f3e6",
   "measurementId": "G-M8SBNT7QJP"
-};
+}
 
-firebase = [pyrebase.initialize_app(config)
-
+firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
-
+ 
 email = input("Please enter your e-mail: ")
 password = input("Please enter your password: ")
 
