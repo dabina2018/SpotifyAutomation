@@ -1,4 +1,10 @@
 import pyrebase
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+
 
 config = {
   "apiKey": "AIzaSyCkaZ5-GD-Db2m4Wyry2d5Xl0IDkXov00s",
