@@ -10,7 +10,6 @@ from firebase_admin import auth
 cred = credentials.Certificate("/home/sysaddy/GitRepos/SpotifyAutomation/creds/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 
-
 config = {
   "apiKey": "AIzaSyCkaZ5-GD-Db2m4Wyry2d5Xl0IDkXov00s",
   "authDomain": "spotifyautomation-352722.firebaseapp.com",
