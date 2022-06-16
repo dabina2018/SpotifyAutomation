@@ -1,8 +1,13 @@
 import pyrebase
 import firebase_admin
 from firebase_admin import credentials
+from firebase_admin import auth
 
-cred = credentials.Certificate("/serviceAccountKey.json")
+
+
+
+
+cred = credentials.Certificate("/home/sysaddy/GitRepos/SpotifyAutomation/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 
 
@@ -20,9 +25,9 @@ config = {
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
  
-email = input("Please enter your e-mail: ")
-password = input("Please enter your password: ")
+email = input('Please enter your e-mail address: ')
+password = input('Please enter your password: ')
 
 user = auth.create_user_with_email_and_password(email, password)
-print("User login successfully created. Yay!")
+print('User login successfully created: (0)'.format(user.get('uid')))
 
