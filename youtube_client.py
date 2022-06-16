@@ -5,7 +5,9 @@ import googleapiclient.discovery
 import youtube_dl
 
 class Playlist(object):
-##from urllib import response
+    def __init__(self,id,title):
+        self.id = id
+        self.title = title
 
 class Song(object):
     def __init__(self, artist, track):
