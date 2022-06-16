@@ -7,7 +7,7 @@ from firebase_admin import auth
 
 
 
-cred = credentials.Certificate("/home/sysaddy/GitRepos/SpotifyAutomation/serviceAccountKey.json")
+cred = credentials.Certificate("/home/sysaddy/GitRepos/SpotifyAutomation/creds/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 
 
