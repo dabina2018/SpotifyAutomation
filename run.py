@@ -1,10 +1,11 @@
 import os
 
+
 from spotify_client import SpotifyClient
 from youtube_client import YouTubeClient
 
 def run():
-#1. Get a list of our pplaylists from YouTube
+#1. Get a list of our playlists from YouTube
 youtube_client = YouTubeClient('./creds/client_secret.json')
 spotify_client = SpotifyClient(os.getenv('SPOTIFY_AUTH_TOKEN'))
 playlists = youtube_client.get_playlists()
@@ -16,9 +17,9 @@ for index, playlist in enumerate(playlists):
     chosen_playlist = playlists[choice]
     print(f"You selected: {chosen_playlist.title}")
 
-#3. For each video in the playsli, get the song information from YouTube
-songs = youtube_client.get_videow_from_playlist(chosen_playlist.id)
-print(f"Attmepting to add {len(songs)}")
+#3. For each video in the playlist, get the song information from YouTube
+songs = youtube_client.get_videos_from_playlist(chosen_playlist.id)
+print(f"Attempting to add {len(songs)}")
 
 #4. Search forthe song on Spotify
 for song in songs:
