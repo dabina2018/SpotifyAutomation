@@ -28,9 +28,6 @@ for song in songs:
         if added_song:
             print(f"Added {song.artist}")
 
-
-
-
 #5. If we found the song, add it to our Spotify liked songs
 
 if __name__ == '__main__':
